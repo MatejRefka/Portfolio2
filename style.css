@@ -1,0 +1,68 @@
+:root {
+  --color-surface: #0b0014;
+  --color-primary: #f5e9e2;
+  --color-primary-50: rgba(245, 233, 226, 0.5);
+  --color-secondary: #d44d5c;
+  --color-grid-lines: rgba(245, 233, 226, 0.15);
+}
+
+.surface {
+  background-color: var(--color-surface);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+/*'draw.io'-esc blueprint background grid*/
+.blueprint-pattern {
+  background-image:
+    linear-gradient(to right, var(--color-grid-lines) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid-lines) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.feature-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-item::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-50);
+}
+
+.diagram-container {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
