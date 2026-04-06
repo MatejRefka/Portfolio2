@@ -1,69 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Matej Refka</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="surface primary blueprint-pattern font-mono min-h-screen">
 
-    <main class="max-w-7xl mx-auto py-20 px-6">
-        
-        <header class="mb-20 text-center">
-            <h1 class="text-3xl font-bold tracking-tighter border-b-2 border-secondary inline-block pb-1">
-                Matej Refka | Full-Stack Engineer specializing in .NET
-            </h1>
-        </header>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              surface: "#0b0014",
+              primary: "#f5e9e2",
+              secondary: "#d44d5c"
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"]
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-surface text-primary font-montserrat bg-surface min-h-screen">
+    <main class="max-w-7xl mx-auto py-10 px-4">
+      <header class="mb-10 text-center">
+        <h1 class="text-3xl font-medium uppercase tracking-tighter inline-block pb-1 border-b-2 border-secondary">
+          Matej Refka | Full-Stack Engineer specializing in .NET
+        </h1>
+      </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4">
-            
-            <section class="project-card">
-                <h2 class="card-title">Pulse Inject</h2>
-                <h3 class="mb-4 opacity-80 font-semibold uppercase text-sm tracking-wider">Dependency Injection Framework</h3>
-                <ul class="feature-list">
-                    <li class="feature-item">Custom DI container and resolver powering the Lambda Pulse web server engine</li>
-                    <li class="feature-item">Registration of abstractions, value types, and reference types, with lifecycle management</li>
-                    <li class="feature-item">Instance caching and automated circular dependency detection</li>
-                </ul>
-                <div class="md:hidden diagram-container mt-8">
-                    <img src="./images/di-mobile.svg" alt="DI Resolver Logic" class="w-full h-auto object-contain">
-                </div>
-            </section>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6">
+        <section class="flex flex-col h-full">
+          <h2 class="text-sm pl-4 font-extrabold uppercase opacity-80">Pulse Inject</h2>
 
-            <section class="project-card">
-                <h2 class="card-title">Lambda Pulse</h2>
-                <h3 class="mb-4 opacity-80 font-semibold uppercase text-sm tracking-wider">Web Server Engine</h3>
-                <ul class="feature-list">
-                    <li class="feature-item">Custom TCP server with raw HTTP/1.1 request/response parsing</li>
-                    <li class="feature-item">Concurrent connections and pipelined request handling</li>
-                    <li class="feature-item">Request pipeline with 20+ pluggable middleware components</li>
-                </ul>
-                <div class="md:hidden diagram-container mt-8">
-                    <img src="./images/web-server-mobile.svg" alt="Middleware Pipeline Flow" class="w-full h-auto object-contain">
-                </div>
-            </section>
+          <h3 class="text-sm pl-4 font-extrabold uppercase mb-3">Dependency Injection Framework</h3>
 
-            <section class="project-card">
-                <h2 class="card-title">Lambda Pulse Lens</h2>
-                <h3 class="mb-4 opacity-80 font-semibold uppercase text-sm tracking-wider">Observability Platform</h3>
-                <ul class="feature-list">
-                    <li class="feature-item">Self-hosted dashboard monitoring the engine powering it</li>
-                    <li class="feature-item">Real-time server telemetry via WebSocket feeds</li>
-                    <li class="feature-item">NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session management</li>
-                </ul>
-                <div class="md:hidden diagram-container mt-8">
-                    <img src="./images/dashboard-mobile.svg" alt="Telemetry Visualizer" class="w-full h-auto object-contain">
-                </div>
-            </section>
-            <div class="hidden md:block w-full md:col-span-3">
-                <img src="./images/ecosystem.svg" alt="Full System Architecture Diagram" class="w-full h-auto object-contain">
+          <ul class="text-sm leading-snug opacity-80">
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Custom DI container and resolver powering the Lambda Pulse web server engine
+            </li>
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Registration of abstractions, value types, and reference types, with lifecycle management
+            </li>
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Instance caching and automated circular dependency detection
+            </li>
+          </ul>
+
+          <div class="mt-auto flex items-center flex-wrap gap-2 ml-4">
+            <div class="flex flex-wrap gap-1">
+              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> C# </span>
             </div>
-        </div>
-    </main>
+            <a
+              href="https://github.com/your-repo"
+              target="_blank"
+              class="inline-flex items-center bg-secondary px-1 py-[1px] rounded-md w-fit hover:opacity-80"
+            >
+              <img src="./images/icons/iconGit.png" alt="GitHub" class="h-6 w-6 object-contain" />
+              <span class="text-xs pl-1">Source Code</span>
+            </a>
+          </div>
 
-</body>
+          <div class="md:hidden mt-auto pt-4 flex items-center justify-center">
+            <img src="./images/diagrams/di-mobile.svg" alt="DI Resolver Logic" class="w-full h-auto object-contain" />
+          </div>
+        </section>
+
+        <section class="flex flex-col h-full">
+          <h2 class="text-sm pl-4 font-extrabold uppercase opacity-80">Lambda Pulse</h2>
+          <h3 class="text-sm pl-4 font-extrabold uppercase mb-3">Web Server Engine</h3>
+          <ul class="text-sm leading-snug opacity-80">
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Custom TCP server with raw HTTP/1.1 request/response parsing
+            </li>
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Concurrent connections and pipelined request handling
+            </li>
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Request pipeline with 20+ pluggable middleware components
+            </li>
+          </ul>
+
+          <div class="mt-auto flex items-center flex-wrap gap-2 ml-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> C# </span>
+            </div>
+            <a
+              href="https://github.com/your-repo"
+              target="_blank"
+              class="inline-flex items-center bg-secondary px-1 py-[1px] rounded-md w-fit hover:opacity-80"
+            >
+              <img src="./images/icons/iconGit.png" alt="GitHub" class="h-6 w-6 object-contain" />
+              <span class="text-xs pl-1">Source Code</span>
+            </a>
+          </div>
+
+          <div class="md:hidden mt-auto pt-4 flex items-center justify-center">
+            <img
+              src="./images/diagrams/web-server-mobile.svg"
+              alt="Middleware Pipeline Flow"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+        </section>
+
+        <section class="flex flex-col h-full">
+          <h2 class="text-sm pl-4 font-extrabold uppercase tracking-wider opacity-80">Lambda Pulse Lens</h2>
+          <h3 class="text-sm pl-4 font-extrabold uppercase tracking-wider mb-3">Observability Platform</h3>
+          <ul class="text-sm leading-snug opacity-80">
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Self-hosted dashboard monitoring the engine powering it
+            </li>
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              Real-time server telemetry via WebSocket feeds
+            </li>
+            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+              NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session management
+            </li>
+          </ul>
+
+          <div class="mt-auto flex items-center flex-wrap gap-2 ml-4">
+            <div class="flex flex-wrap gap-1">
+              <span class="px-1 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> React </span>
+              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> TypeScript </span>
+              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> Tailwind </span>
+              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> PostgreSQL </span>
+            </div>
+
+            <a
+              href="https://github.com/your-repo"
+              target="_blank"
+              class="inline-flex items-center bg-secondary px-1 py-[1px] rounded-md w-fit hover:opacity-80"
+            >
+              <img src="./images/icons/iconGit.png" alt="GitHub" class="h-6 w-6 object-contain" />
+              <span class="text-xs pl-1">Source Code</span>
+            </a>
+          </div>
+
+          <div class="md:hidden mt-auto pt-4 flex items-center justify-center">
+            <img
+              src="./images/diagrams/dashboard-mobile.svg"
+              alt="Telemetry Visualizer"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+        </section>
+
+        <div class="hidden md:block w-full md:col-span-3 mt-4">
+          <img
+            src="./images/diagrams/ecosystem.svg"
+            alt="Full System Architecture Diagram"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
