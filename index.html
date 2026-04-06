@@ -30,137 +30,174 @@
       };
     </script>
   </head>
-  <body class="bg-surface text-primary font-montserrat bg-surface min-h-screen">
+  <body class="bg-surface text-primary font-montserrat min-h-screen">
     <main class="max-w-7xl mx-auto py-10 px-4">
-      <header class="mb-10 text-center">
-        <h1 class="text-3xl font-medium uppercase tracking-tighter inline-block pb-1 border-b-2 border-secondary">
-          Matej Refka | Full-Stack Engineer specializing in .NET
-        </h1>
+      <header class="mb-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">Matej Refka</h1>
+        <p class="text-xs md:text-sm font-medium tracking-[0.3em] uppercase text-primary/60">
+          Full-Stack Engineer specializing in .NET
+        </p>
       </header>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6">
         <section class="flex flex-col h-full">
-          <h2 class="text-sm pl-4 font-extrabold uppercase opacity-80">Pulse Inject</h2>
+          <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Pulse Inject</h2>
+          <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Dependency Injection Framework</h3>
 
-          <h3 class="text-sm pl-4 font-extrabold uppercase mb-3">Dependency Injection Framework</h3>
-
-          <ul class="text-sm leading-snug opacity-80">
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+          <ul class="text-sm opacity-80 space-y-3 mb-3">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Custom DI container and resolver powering the Lambda Pulse web server engine
             </li>
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Registration of abstractions, value types, and reference types, with lifecycle management
             </li>
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Instance caching and automated circular dependency detection
             </li>
           </ul>
 
-          <div class="mt-auto flex items-center flex-wrap gap-2 ml-4">
-            <div class="flex flex-wrap gap-1">
-              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> C# </span>
+          <div class="ml-4">
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span
+                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
+                >C#</span
+              >
             </div>
             <a
               href="https://github.com/your-repo"
               target="_blank"
-              class="inline-flex items-center bg-secondary px-1 py-[1px] rounded-md w-fit hover:opacity-80"
+              class="group inline-flex items-center gap-2 px-2 py-1 border border-secondary text-secondary hover:border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm"
             >
-              <img src="./images/icons/iconGit.png" alt="GitHub" class="h-6 w-6 object-contain" />
-              <span class="text-xs pl-1">Source Code</span>
+              <img
+                src="./images/icons/iconGit.png"
+                alt=""
+                class="h-5 w-5 transition-all duration-300 group-hover:invert group-hover:brightness-0"
+              />
+              <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Source Code</span>
             </a>
           </div>
 
-          <div class="md:hidden mt-auto pt-4 flex items-center justify-center">
-            <img src="./images/diagrams/di-mobile.svg" alt="DI Resolver Logic" class="w-full h-auto object-contain" />
+          <div class="md:hidden mt-8">
+            <img src="./images/diagrams/di-mobile.svg" alt="DI Resolver Logic" class="w-full opacity-80" />
           </div>
         </section>
 
         <section class="flex flex-col h-full">
-          <h2 class="text-sm pl-4 font-extrabold uppercase opacity-80">Lambda Pulse</h2>
-          <h3 class="text-sm pl-4 font-extrabold uppercase mb-3">Web Server Engine</h3>
-          <ul class="text-sm leading-snug opacity-80">
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+          <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Lambda Pulse</h2>
+          <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Web Server Engine</h3>
+
+          <ul class="text-sm opacity-80 space-y-3 mb-3">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Custom TCP server with raw HTTP/1.1 request/response parsing
             </li>
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Concurrent connections and pipelined request handling
             </li>
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Request pipeline with 20+ pluggable middleware components
             </li>
           </ul>
 
-          <div class="mt-auto flex items-center flex-wrap gap-2 ml-4">
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> C# </span>
+          <div class="ml-5">
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span
+                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
+                >C#</span
+              >
             </div>
             <a
               href="https://github.com/your-repo"
               target="_blank"
-              class="inline-flex items-center bg-secondary px-1 py-[1px] rounded-md w-fit hover:opacity-80"
+              class="group inline-flex items-center gap-2 px-2 py-1 border border-secondary text-secondary hover:border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm"
             >
-              <img src="./images/icons/iconGit.png" alt="GitHub" class="h-6 w-6 object-contain" />
-              <span class="text-xs pl-1">Source Code</span>
+              <img
+                src="./images/icons/iconGit.png"
+                alt=""
+                class="h-5 w-5 transition-all duration-300 group-hover:invert group-hover:brightness-0"
+              />
+              <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Source Code</span>
             </a>
           </div>
 
-          <div class="md:hidden mt-auto pt-4 flex items-center justify-center">
-            <img
-              src="./images/diagrams/web-server-mobile.svg"
-              alt="Middleware Pipeline Flow"
-              class="w-full h-auto object-contain"
-            />
+          <div class="md:hidden mt-8">
+            <img src="./images/diagrams/web-server-mobile.svg" alt="Middleware Flow" class="w-full opacity-80" />
           </div>
         </section>
 
         <section class="flex flex-col h-full">
-          <h2 class="text-sm pl-4 font-extrabold uppercase tracking-wider opacity-80">Lambda Pulse Lens</h2>
-          <h3 class="text-sm pl-4 font-extrabold uppercase tracking-wider mb-3">Observability Platform</h3>
-          <ul class="text-sm leading-snug opacity-80">
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+          <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Lambda Pulse Lens</h2>
+          <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Observability Platform</h3>
+
+          <ul class="text-sm opacity-80 space-y-3 mb-3">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Self-hosted dashboard monitoring the engine powering it
             </li>
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               Real-time server telemetry via WebSocket feeds
             </li>
-            <li class="relative pl-4 mb-3 before:content-['→'] before:absolute before:left-0 before:text-primary/50">
+            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
               NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session management
             </li>
           </ul>
 
-          <div class="mt-auto flex items-center flex-wrap gap-2 ml-4">
-            <div class="flex flex-wrap gap-1">
-              <span class="px-1 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> React </span>
-              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> TypeScript </span>
-              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> Tailwind </span>
-              <span class="px-2 py-0.5 border border-primary/50 text-primary/80 rounded-sm text-xs"> PostgreSQL </span>
+          <div class="ml-5">
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span
+                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
+                >React</span
+              >
+              <span
+                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
+                >TypeScript</span
+              >
+              <span
+                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
+                >Tailwind</span
+              >
+              <span
+                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
+                >PostgreSQL</span
+              >
             </div>
-
             <a
               href="https://github.com/your-repo"
               target="_blank"
-              class="inline-flex items-center bg-secondary px-1 py-[1px] rounded-md w-fit hover:opacity-80"
+              class="group inline-flex items-center gap-2 px-2 py-1 border border-secondary text-secondary hover:border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm"
             >
-              <img src="./images/icons/iconGit.png" alt="GitHub" class="h-6 w-6 object-contain" />
-              <span class="text-xs pl-1">Source Code</span>
+              <img
+                src="./images/icons/iconGit.png"
+                alt=""
+                class="h-5 w-5 transition-all duration-300 group-hover:invert group-hover:brightness-0"
+              />
+              <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Source Code</span>
             </a>
           </div>
 
-          <div class="md:hidden mt-auto pt-4 flex items-center justify-center">
-            <img
-              src="./images/diagrams/dashboard-mobile.svg"
-              alt="Telemetry Visualizer"
-              class="w-full h-auto object-contain"
-            />
+          <div class="md:hidden mt-8">
+            <img src="./images/diagrams/dashboard-mobile.svg" alt="Telemetry Visualizer" class="w-full opacity-80" />
           </div>
         </section>
 
-        <div class="hidden md:block w-full md:col-span-3 mt-4">
-          <img
-            src="./images/diagrams/ecosystem.svg"
-            alt="Full System Architecture Diagram"
-            class="w-full h-auto object-contain"
-          />
+        <div class="hidden md:block w-full md:col-span-3 mt-12">
+          <p class="text-center text-xs uppercase tracking-[0.3em] opacity-40">-- Diagram here --</p>
+          <img src="./images/diagrams/ecosystem.svg" alt="Full System Architecture Diagram" class="w-full h-auto" />
+        </div>
+
+        <div class="mt-20 mb-10 relative flex items-center justify-center">
+          <div class="absolute inset-x-0 h-px bg-primary/10"></div>
+          <button
+            class="relative bg-surface px-6 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/50 hover:text-secondary transition-colors duration-300 flex items-center gap-2 group"
+          >
+            Show Archive Projects
+            <svg
+              class="w-3 h-3 text-secondary/50 group-hover:text-secondary transition-all group-hover:translate-y-0.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </main>
