@@ -30,16 +30,16 @@
       };
     </script>
   </head>
-  <body class="bg-surface text-primary font-montserrat min-h-screen">
-    <main class="max-w-7xl mx-auto py-10 px-4">
-      <header class="mb-12 text-center">
+  <body class="bg-surface text-primary font-montserrat min-h-screen flex flex-col">
+    <main class="max-w-7xl w-full mx-auto py-12 px-4 flex flex-col flex-grow">
+      <header class="mb-16 text-center">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">Matej Refka</h1>
-        <p class="text-xs md:text-sm font-medium tracking-[0.3em] uppercase text-primary/60">
+        <p class="text-sm md:text-sm font-light tracking-[0.3em] uppercase text-primary/50">
           Full-Stack Engineer specializing in .NET
         </p>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
         <section class="flex flex-col h-full">
           <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Pulse Inject</h2>
           <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Dependency Injection Framework</h3>
@@ -56,7 +56,7 @@
             </li>
           </ul>
 
-          <div class="ml-4">
+          <div class="ml-4 mt-auto pt-4">
             <div class="flex flex-wrap gap-2 mb-2">
               <span
                 class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
@@ -94,7 +94,7 @@
             </li>
           </ul>
 
-          <div class="ml-5">
+          <div class="ml-5 mt-auto pt-4">
             <div class="flex flex-wrap gap-2 mb-2">
               <span
                 class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
@@ -132,7 +132,7 @@
             </li>
           </ul>
 
-          <div class="ml-5">
+          <div class="ml-5 mt-auto pt-4">
             <div class="flex flex-wrap gap-2 mb-2">
               <span
                 class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
@@ -165,44 +165,40 @@
             </a>
           </div>
         </section>
-
-        <div class="mt-12 text-center w-full md:col-span-3">
-          <p class="text-[10px] uppercase tracking-[0.3em] mb-5 opacity-40">
-            Interact with the custom web server & telemetry dashboard.
-          </p>
-
-          <a
-            href="https://your-live-link.com"
-            target="_blank"
-            class="group inline-flex items-center gap-3 px-6 py-2.5 bg-secondary/10 border border-secondary/50 text-secondary hover:bg-secondary hover:text-surface transition-all duration-300 rounded-sm whitespace-nowrap"
+      </div>
+      <div class="mt-16 text-center w-full">
+        <p class="text-[10px] uppercase tracking-[0.3em] mb-4 text-primary/50">Interact with Lambda Pulse ecosystem</p>
+        <a
+          href="https://your-live-link.com"
+          target="_blank"
+          class="group inline-flex items-center gap-3 px-6 py-2.5 bg-secondary/10 border border-secondary/50 text-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm whitespace-nowrap"
+        >
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Live Demo</span>
+          <svg
+            class="w-3 h-3 -mt-0.5 transition-transform duration-300 group-hover:translate-x-px"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <span class="text-[10px] font-bold uppercase tracking-[0.2em]">View the Live Ecosystem</span>
-            <svg
-              class="w-4 h-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
-        </div>
-        <div class="mt-3 relative flex items-center justify-center">
-          <div class="absolute inset-x-0 h-px bg-primary/10"></div>
-          <button
-            class="relative bg-surface px-6 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50 hover:text-secondary transition-colors duration-300 flex items-center gap-2 group"
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="mt-auto pt-20 pb-12 w-full flex justify-center">
+        <button
+          class="text-[10px] uppercase tracking-[0.3em] text-primary/50 hover:text-secondary transition-colors duration-300 flex items-center gap-2 group"
+        >
+          Show Archive Projects
+          <svg
+            class="w-3 h-3 -mt-0.5 text-secondary/50 group-hover:text-secondary transition-all duration-300 group-hover:translate-y-px"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            Show Archive Projects
-            <svg
-              class="w-3 h-3 text-secondary/50 group-hover:text-secondary transition-all group-hover:translate-y-0.5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-        </div>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
       </div>
     </main>
   </body>
