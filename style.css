@@ -1,0 +1,385 @@
+:root {
+  --surface: #0b0014;
+  --primary: #f5e9e2;
+  --secondary: #d44d5c;
+  font-family: "Montserrat", sans-serif;
+  font-synthesis: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: #e5e7eb;
+  border-style: solid;
+  border-width: 0;
+}
+
+html {
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--primary);
+  background: var(--surface);
+  line-height: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  background: transparent;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+img,
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-shell {
+  width: 100%;
+  max-width: 80rem;
+  padding: 2.5rem 1rem;
+  margin-inline: auto;
+}
+
+.site-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+}
+
+.site-header p {
+  color: rgb(245 233 226 / 60%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 1.5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project h2,
+.project h3 {
+  margin-left: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+.project h2 {
+  opacity: 0.6;
+}
+
+.project h3 {
+  margin-bottom: 0.75rem;
+}
+
+.project-points {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.8;
+}
+
+.project-points li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.project-points li + li {
+  margin-top: 0.75rem;
+}
+
+.project-points li::before {
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  content: "→";
+}
+
+.project-actions {
+  margin-left: 1.25rem;
+}
+
+.project-actions--compact {
+  margin-left: 1rem;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.technology-list li {
+  padding: 0.25rem 0.5rem;
+  color: rgb(245 233 226 / 80%);
+  border-width: 1px;
+  border-color: rgb(245 233 226 / 30%);
+  border-radius: 0.125rem;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--secondary);
+  border-width: 1px;
+  border-color: var(--secondary);
+  border-radius: 0.125rem;
+  transition:
+    color 300ms,
+    background-color 300ms,
+    border-color 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.source-link:hover {
+  color: var(--primary);
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.source-link img {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: filter 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.source-link:hover img {
+  filter: invert(1) brightness(0);
+}
+
+.source-link span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.live-demo {
+  width: 100%;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.live-demo > p {
+  margin-bottom: 1.25rem;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  color: var(--primary);
+  background: var(--secondary);
+  border-radius: 0.125rem;
+  box-shadow: 0 0 15px rgb(212 77 92 / 15%);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    background-color 300ms,
+    box-shadow 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.live-link:hover {
+  background: rgb(212 77 92 / 80%);
+  box-shadow: 0 0 25px rgb(212 77 92 / 30%);
+}
+
+.live-indicator {
+  position: relative;
+  display: flex;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-right: 0.25rem;
+}
+
+.live-ping,
+.live-dot {
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+.live-ping {
+  position: absolute;
+  display: inline-flex;
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.live-dot {
+  position: relative;
+  display: inline-flex;
+}
+
+.archive-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.archive-rule {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: rgb(245 233 226 / 10%);
+}
+
+.archive-control button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1.5rem;
+  color: rgb(245 233 226 / 50%);
+  background: var(--surface);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.archive-control button:hover {
+  color: var(--secondary);
+}
+
+.archive-control svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: rgb(212 77 92 / 50%);
+  transition:
+    color 300ms,
+    transform 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.archive-control button:hover svg {
+  color: var(--secondary);
+  transform: translateY(0.125rem);
+}
+
+.source-link:focus-visible,
+.live-link:focus-visible,
+.archive-control button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@media (min-width: 48rem) {
+  .site-header h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .site-header p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .live-demo,
+  .archive-control {
+    grid-column: span 3 / span 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-ping {
+    animation: none;
+  }
+
+  .source-link,
+  .source-link img,
+  .live-link,
+  .archive-control button,
+  .archive-control svg {
+    transition-duration: 0.01ms;
+  }
+}

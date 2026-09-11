@@ -9,187 +9,128 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Matej Refka</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              surface: "#0b0014",
-              primary: "#f5e9e2",
-              secondary: "#d44d5c"
-            },
-            fontFamily: {
-              montserrat: ["Montserrat", "sans-serif"]
-            }
-          }
-        }
-      };
-    </script>
   </head>
-  <body class="bg-surface text-primary font-montserrat min-h-screen">
-    <main class="max-w-7xl mx-auto py-10 px-4">
-      <header class="mb-12 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">Matej Refka</h1>
-        <p class="text-xs md:text-sm font-medium tracking-[0.3em] uppercase text-primary/60">
-          Full-Stack Engineer specializing in .NET
-        </p>
+
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <h1>Matej Refka</h1>
+        <p>Full-Stack Engineer specializing in .NET</p>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6">
-        <section class="flex flex-col h-full">
-          <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Pulse Inject</h2>
-          <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Dependency Injection Framework</h3>
+      <div class="project-grid">
+        <section class="project">
+          <h2>Pulse Inject</h2>
+          <h3>Dependency Injection Framework</h3>
 
-          <ul class="text-sm opacity-80 space-y-3 mb-3">
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Custom DI container and resolver powering the Lambda Pulse web server engine
-            </li>
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
+          <ul class="project-points">
+            <li>Custom DI container and resolver powering the Lambda Pulse web server engine</li>
+            <li>
               Registration of abstractions, value types, and reference types, with lifecycle management
             </li>
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Instance caching and automated circular dependency detection
-            </li>
+            <li>Instance caching and automated circular dependency detection</li>
           </ul>
 
-          <div class="ml-4">
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span
-                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
-                >C#</span
-              >
-            </div>
+          <div class="project-actions project-actions--compact">
+            <ul class="technology-list" aria-label="Technologies">
+              <li>C#</li>
+            </ul>
             <a
+              class="source-link"
               href="https://github.com/your-repo"
               target="_blank"
-              class="group inline-flex items-center gap-2 px-2 py-1 border border-secondary text-secondary hover:border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm"
+              rel="noopener noreferrer"
             >
-              <img
-                src="./images/icons/iconGit.png"
-                alt=""
-                class="h-5 w-5 transition-all duration-300 group-hover:invert group-hover:brightness-0"
-              />
-              <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Source Code</span>
+              <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
+              <span>Source Code</span>
             </a>
           </div>
         </section>
 
-        <section class="flex flex-col h-full">
-          <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Lambda Pulse</h2>
-          <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Web Server Engine</h3>
+        <section class="project">
+          <h2>Lambda Pulse</h2>
+          <h3>Web Server Engine</h3>
 
-          <ul class="text-sm opacity-80 space-y-3 mb-3">
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Custom TCP server with raw HTTP/1.1 request/response parsing
-            </li>
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Concurrent connections and pipelined request handling
-            </li>
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Request pipeline with 20+ pluggable middleware components
-            </li>
+          <ul class="project-points">
+            <li>Custom TCP server with raw HTTP/1.1 request/response parsing</li>
+            <li>Concurrent connections and pipelined request handling</li>
+            <li>Request pipeline with 20+ pluggable middleware components</li>
           </ul>
 
-          <div class="ml-5">
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span
-                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
-                >C#</span
-              >
-            </div>
+          <div class="project-actions">
+            <ul class="technology-list" aria-label="Technologies">
+              <li>C#</li>
+            </ul>
             <a
+              class="source-link"
               href="https://github.com/your-repo"
               target="_blank"
-              class="group inline-flex items-center gap-2 px-2 py-1 border border-secondary text-secondary hover:border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm"
+              rel="noopener noreferrer"
             >
-              <img
-                src="./images/icons/iconGit.png"
-                alt=""
-                class="h-5 w-5 transition-all duration-300 group-hover:invert group-hover:brightness-0"
-              />
-              <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Source Code</span>
+              <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
+              <span>Source Code</span>
             </a>
           </div>
         </section>
 
-        <section class="flex flex-col h-full">
-          <h2 class="text-sm ml-5 font-extrabold uppercase opacity-60">Lambda Pulse Lens</h2>
-          <h3 class="text-sm ml-5 font-extrabold uppercase mb-3">Observability Platform</h3>
+        <section class="project">
+          <h2>Lambda Pulse Lens</h2>
+          <h3>Observability Platform</h3>
 
-          <ul class="text-sm opacity-80 space-y-3 mb-3">
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Self-hosted dashboard monitoring the engine powering it
-            </li>
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              Real-time server telemetry via WebSocket feeds
-            </li>
-            <li class="relative pl-5 before:content-['→'] before:absolute before:left-0 before:text-secondary">
-              NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session management
+          <ul class="project-points">
+            <li>Self-hosted dashboard monitoring the engine powering it</li>
+            <li>Real-time server telemetry via WebSocket feeds</li>
+            <li>
+              NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session
+              management
             </li>
           </ul>
 
-          <div class="ml-5">
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span
-                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
-                >React</span
-              >
-              <span
-                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
-                >TypeScript</span
-              >
-              <span
-                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
-                >Tailwind</span
-              >
-              <span
-                class="px-2 py-1 border border-primary/30 text-primary/80 rounded-sm text-[10px] uppercase tracking-widest"
-                >PostgreSQL</span
-              >
-            </div>
+          <div class="project-actions">
+            <ul class="technology-list" aria-label="Technologies">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Tailwind</li>
+              <li>PostgreSQL</li>
+            </ul>
             <a
+              class="source-link"
               href="https://github.com/your-repo"
               target="_blank"
-              class="group inline-flex items-center gap-2 px-2 py-1 border border-secondary text-secondary hover:border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 rounded-sm"
+              rel="noopener noreferrer"
             >
-              <img
-                src="./images/icons/iconGit.png"
-                alt=""
-                class="h-5 w-5 transition-all duration-300 group-hover:invert group-hover:brightness-0"
-              />
-              <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Source Code</span>
+              <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
+              <span>Source Code</span>
             </a>
           </div>
         </section>
 
-        <div class="mt-12 text-center w-full md:col-span-3">
-          <p class="text-[10px] uppercase tracking-[0.3em] mb-5 opacity-40">Experience the Full Stack</p>
+        <div class="live-demo">
+          <p>Experience the Full Stack</p>
 
           <a
+            class="live-link"
             href="https://your-live-link.com"
             target="_blank"
-            class="inline-flex items-center gap-3 px-8 py-3 bg-secondary text-primary hover:bg-secondary/80 transition-all duration-300 uppercase tracking-widest text-[11px] font-bold rounded-sm shadow-[0_0_15px_rgba(212,77,92,0.15)] hover:shadow-[0_0_25px_rgba(212,77,92,0.3)]"
+            rel="noopener noreferrer"
           >
-            <span class="relative flex h-2.5 w-2.5 mr-1">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            <span class="live-indicator" aria-hidden="true">
+              <span class="live-ping"></span>
+              <span class="live-dot"></span>
             </span>
-
             View the Ecosystem Live
           </a>
         </div>
-        <div class="mt-3 relative flex items-center justify-center md:col-span-3">
-          <div class="absolute inset-x-0 h-px bg-primary/10"></div>
-          <button
-            class="relative bg-surface px-6 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50 hover:text-secondary transition-colors duration-300 flex items-center gap-2 group"
-          >
+
+        <div class="archive-control">
+          <div class="archive-rule" aria-hidden="true"></div>
+          <button type="button" disabled aria-disabled="true">
             Show Archive Projects
             <svg
-              class="w-3 h-3 text-secondary/50 group-hover:text-secondary transition-all group-hover:translate-y-0.5"
+              aria-hidden="true"
+              focusable="false"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
