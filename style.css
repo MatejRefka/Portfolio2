@@ -38,8 +38,16 @@ body {
   line-height: inherit;
 }
 
-body:not(.archive-open) {
+html:not(.page-transitioning) {
   overflow-y: hidden;
+}
+
+html.page-transitioning {
+  scrollbar-width: none;
+}
+
+html.page-transitioning::-webkit-scrollbar {
+  display: none;
 }
 
 [hidden] {
