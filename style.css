@@ -2,6 +2,7 @@
   --surface: #0b0014;
   --primary: #f5e9e2;
   --secondary: #d44d5c;
+  --secondary-hover: #e15d6c;
   font-family: "Montserrat", sans-serif;
   font-synthesis: none;
 }
@@ -226,7 +227,8 @@ img {
   transition:
     color 300ms,
     background-color 300ms,
-    border-color 300ms;
+    border-color 300ms,
+    box-shadow 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -234,6 +236,7 @@ img {
   color: var(--primary);
   background: var(--secondary);
   border-color: var(--secondary);
+  box-shadow: 0 0 15px rgb(212 77 92 / 15%);
 }
 
 .source-link img {
@@ -244,7 +247,7 @@ img {
 }
 
 .source-link:hover img {
-  filter: invert(1) brightness(0);
+  filter: brightness(0) invert(1);
 }
 
 .source-link span {
@@ -261,7 +264,8 @@ img {
 }
 
 .live-project-link:hover {
-  background: rgb(212 77 92 / 80%);
+  background: var(--secondary-hover);
+  border-color: var(--secondary-hover);
   box-shadow: 0 0 25px rgb(212 77 92 / 30%);
 }
 
