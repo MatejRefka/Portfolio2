@@ -10,136 +10,186 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
     <title>Matej Refka</title>
   </head>
 
   <body>
-    <main class="page-shell">
-      <header class="site-header">
-        <h1>Matej Refka</h1>
-        <p>Full-Stack Engineer specializing in .NET</p>
-      </header>
+    <main>
+      <section class="portfolio-page" id="featured-page" aria-label="Featured projects">
+        <div class="page-shell">
+          <header class="site-header">
+            <h1>Matej Refka</h1>
+            <p>Full-Stack Engineer specializing in .NET</p>
+          </header>
 
-      <div class="project-grid">
-        <section class="project">
-          <h2>Pulse Inject</h2>
-          <h3>Dependency Injection Framework</h3>
+          <div class="page-content">
+            <div class="project-grid">
+              <section class="project">
+                <h2>Pulse Inject</h2>
+                <h3>Dependency Injection Framework</h3>
 
-          <ul class="project-points">
-            <li>Custom DI container and resolver powering the Lambda Pulse web server engine</li>
-            <li>
-              Registration of abstractions, value types, and reference types, with lifecycle management
-            </li>
-            <li>Instance caching and automated circular dependency detection</li>
-          </ul>
+                <ul class="project-points">
+                  <li>Custom DI container and resolver powering the Lambda Pulse web server engine</li>
+                  <li>
+                    Registration of abstractions, value types, and reference types, with lifecycle management
+                  </li>
+                  <li>Instance caching and automated circular dependency detection</li>
+                </ul>
 
-          <div class="project-actions project-actions--compact">
-            <ul class="technology-list" aria-label="Technologies">
-              <li>C#</li>
-            </ul>
-            <a
-              class="source-link"
-              href="https://github.com/your-repo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
-              <span>Source Code</span>
-            </a>
+                <div class="project-actions project-actions--compact">
+                  <ul class="technology-list" aria-label="Technologies">
+                    <li>C#</li>
+                  </ul>
+                  <a
+                    class="source-link"
+                    href="https://github.com/your-repo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </section>
+
+              <section class="project">
+                <h2>Lambda Pulse</h2>
+                <h3>Web Server Engine</h3>
+
+                <ul class="project-points">
+                  <li>Custom TCP server with raw HTTP/1.1 request/response parsing</li>
+                  <li>Concurrent connections and pipelined request handling</li>
+                  <li>Request pipeline with 20+ pluggable middleware components</li>
+                </ul>
+
+                <div class="project-actions">
+                  <ul class="technology-list" aria-label="Technologies">
+                    <li>C#</li>
+                  </ul>
+                  <a
+                    class="source-link"
+                    href="https://github.com/your-repo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </section>
+
+              <section class="project">
+                <h2>Lambda Pulse Lens</h2>
+                <h3>Observability Platform</h3>
+
+                <ul class="project-points">
+                  <li>Self-hosted dashboard monitoring the engine powering it</li>
+                  <li>Real-time server telemetry via WebSocket feeds</li>
+                  <li>
+                    NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and
+                    session management
+                  </li>
+                </ul>
+
+                <div class="project-actions">
+                  <ul class="technology-list" aria-label="Technologies">
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind</li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                  <a
+                    class="source-link"
+                    href="https://github.com/your-repo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <div class="live-demo">
+              <p>Experience the Full Stack</p>
+
+              <a
+                class="live-link"
+                href="https://your-live-link.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="live-indicator" aria-hidden="true">
+                  <span class="live-ping"></span>
+                  <span class="live-dot"></span>
+                </span>
+                View the Ecosystem Live
+              </a>
+            </div>
           </div>
-        </section>
 
-        <section class="project">
-          <h2>Lambda Pulse</h2>
-          <h3>Web Server Engine</h3>
-
-          <ul class="project-points">
-            <li>Custom TCP server with raw HTTP/1.1 request/response parsing</li>
-            <li>Concurrent connections and pipelined request handling</li>
-            <li>Request pipeline with 20+ pluggable middleware components</li>
-          </ul>
-
-          <div class="project-actions">
-            <ul class="technology-list" aria-label="Technologies">
-              <li>C#</li>
-            </ul>
-            <a
-              class="source-link"
-              href="https://github.com/your-repo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
-              <span>Source Code</span>
-            </a>
+          <div class="page-control">
+            <div class="archive-rule" aria-hidden="true"></div>
+            <button id="show-archive" type="button" aria-expanded="false" aria-controls="archive-page">
+              Show Archive Projects
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
           </div>
-        </section>
-
-        <section class="project">
-          <h2>Lambda Pulse Lens</h2>
-          <h3>Observability Platform</h3>
-
-          <ul class="project-points">
-            <li>Self-hosted dashboard monitoring the engine powering it</li>
-            <li>Real-time server telemetry via WebSocket feeds</li>
-            <li>
-              NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session
-              management
-            </li>
-          </ul>
-
-          <div class="project-actions">
-            <ul class="technology-list" aria-label="Technologies">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Tailwind</li>
-              <li>PostgreSQL</li>
-            </ul>
-            <a
-              class="source-link"
-              href="https://github.com/your-repo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./images/icons/iconGit.png" alt="" width="20" height="20" />
-              <span>Source Code</span>
-            </a>
-          </div>
-        </section>
-
-        <div class="live-demo">
-          <p>Experience the Full Stack</p>
-
-          <a
-            class="live-link"
-            href="https://your-live-link.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="live-indicator" aria-hidden="true">
-              <span class="live-ping"></span>
-              <span class="live-dot"></span>
-            </span>
-            View the Ecosystem Live
-          </a>
         </div>
+      </section>
 
-        <div class="archive-control">
-          <div class="archive-rule" aria-hidden="true"></div>
-          <button type="button" disabled aria-disabled="true">
-            Show Archive Projects
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
+      <section class="portfolio-page archive-page" id="archive-page" aria-labelledby="archive-title" hidden>
+        <div class="page-shell">
+          <header class="archive-header">
+            <h2 id="archive-title" tabindex="-1">Archive Projects</h2>
+          </header>
+
+          <div class="page-content">
+            <div class="project-grid archive-grid">
+              <section class="project archive-project">
+                <h3>Legacy Project 01</h3>
+                <p>Project details to be added.</p>
+              </section>
+
+              <section class="project archive-project">
+                <h3>Legacy Project 02</h3>
+                <p>Project details to be added.</p>
+              </section>
+
+              <section class="project archive-project">
+                <h3>Legacy Project 03</h3>
+                <p>Project details to be added.</p>
+              </section>
+            </div>
+          </div>
+
+          <div class="page-control page-control--back">
+            <div class="archive-rule" aria-hidden="true"></div>
+            <button id="hide-archive" type="button">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path>
+              </svg>
+              Go Back to Main Projects
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

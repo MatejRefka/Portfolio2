@@ -17,6 +17,7 @@
 
 html {
   line-height: 1.5;
+  scroll-behavior: smooth;
   tab-size: 4;
 }
 
@@ -31,9 +32,18 @@ ul {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--primary);
   background: var(--surface);
   line-height: inherit;
+}
+
+body:not(.archive-open) {
+  overflow-y: hidden;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 ul {
@@ -70,16 +80,36 @@ img {
   height: auto;
 }
 
+.portfolio-page {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  scroll-margin-top: 0;
+}
+
 .page-shell {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 80rem;
+  height: 100%;
   padding: 2.5rem 1rem;
   margin-inline: auto;
+  overflow: hidden;
 }
 
 .site-header {
+  flex: 0 0 auto;
   margin-bottom: 3rem;
   text-align: center;
+}
+
+.page-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .site-header h1 {
@@ -283,9 +313,10 @@ img {
   display: inline-flex;
 }
 
-.archive-control {
+.page-control {
   position: relative;
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   margin-top: 0.75rem;
@@ -299,7 +330,7 @@ img {
   background: rgb(245 233 226 / 10%);
 }
 
-.archive-control button {
+.page-control button {
   position: relative;
   display: flex;
   align-items: center;
@@ -315,11 +346,11 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.archive-control button:hover {
+.page-control button:hover {
   color: var(--secondary);
 }
 
-.archive-control svg {
+.page-control svg {
   width: 0.75rem;
   height: 0.75rem;
   color: rgb(212 77 92 / 50%);
@@ -329,16 +360,55 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.archive-control button:hover svg {
+.page-control button:hover svg {
   color: var(--secondary);
   transform: translateY(0.125rem);
 }
 
 .source-link:focus-visible,
 .live-link:focus-visible,
-.archive-control button:focus-visible {
+.page-control button:focus-visible,
+.archive-header h2:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
+}
+
+.archive-header {
+  flex: 0 0 auto;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.archive-header h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+}
+
+.archive-project {
+  min-height: 8rem;
+  padding: 1.25rem;
+  border: 1px solid rgb(245 233 226 / 10%);
+}
+
+.archive-grid {
+  row-gap: 1rem;
+}
+
+.archive-project h3 {
+  margin: 0 0 0.75rem;
+  opacity: 0.6;
+}
+
+.archive-project p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.6;
+}
+
+.page-control--back svg {
+  order: -1;
 }
 
 @keyframes ping {
@@ -365,12 +435,21 @@ img {
   }
 
   .live-demo,
-  .archive-control {
+  .page-control {
     grid-column: span 3 / span 3;
+  }
+
+  .archive-header h2 {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .live-ping {
     animation: none;
   }
@@ -378,8 +457,8 @@ img {
   .source-link,
   .source-link img,
   .live-link,
-  .archive-control button,
-  .archive-control svg {
+  .page-control button,
+  .page-control svg {
     transition-duration: 0.01ms;
   }
 }
