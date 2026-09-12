@@ -1,7 +1,7 @@
 :root {
   --surface: #0b0014;
   --primary: #f5e9e2;
-  --secondary: #d44d5c;
+  --action: #e5a1af;
   font-family: "Montserrat", sans-serif;
   font-synthesis: none;
 }
@@ -125,7 +125,7 @@ img {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
@@ -139,6 +139,12 @@ img {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+#featured-page .project {
+  padding: 1rem;
+  border: 1px solid rgb(245 233 226 / 10%);
+  border-radius: 0.125rem;
 }
 
 .project h2,
@@ -156,6 +162,20 @@ img {
 
 .project h3 {
   margin-bottom: 0.75rem;
+}
+
+#featured-page .project h2 {
+  margin-bottom: 0.125rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+}
+
+#featured-page .project h3 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.01em;
 }
 
 .project-points {
@@ -176,9 +196,14 @@ img {
 
 .project-points li::before {
   position: absolute;
-  left: 0;
-  color: var(--secondary);
-  content: "→";
+  top: 0.625rem;
+  left: 0.1875rem;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border: 1px solid rgb(245 233 226 / 50%);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
 }
 
 .project-actions {
@@ -220,9 +245,9 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.25rem 0.5rem;
-  color: var(--secondary);
+  color: var(--action);
   border-width: 1px;
-  border-color: var(--secondary);
+  border-color: var(--action);
   border-radius: 0.125rem;
   transition:
     color 300ms,
@@ -233,10 +258,10 @@ img {
 }
 
 .source-link:hover {
-  color: var(--primary);
-  background: var(--secondary);
-  border-color: var(--secondary);
-  box-shadow: 0 0 15px rgb(212 77 92 / 15%);
+  color: var(--surface);
+  background: var(--action);
+  border-color: var(--action);
+  box-shadow: 0 0 15px rgb(229 161 175 / 15%);
 }
 
 .source-link img {
@@ -247,7 +272,7 @@ img {
 }
 
 .source-link:hover img {
-  filter: brightness(0) invert(1);
+  filter: brightness(0);
 }
 
 .source-link span {
@@ -292,13 +317,13 @@ img {
 }
 
 .page-control button:hover {
-  color: var(--secondary);
+  color: var(--action);
 }
 
 .page-control svg {
   width: 0.75rem;
   height: 0.75rem;
-  color: rgb(212 77 92 / 50%);
+  color: rgb(229 161 175 / 50%);
   transition:
     color 300ms,
     transform 300ms;
@@ -306,7 +331,7 @@ img {
 }
 
 .page-control button:hover svg {
-  color: var(--secondary);
+  color: var(--action);
   transform: translateY(0.125rem);
 }
 
