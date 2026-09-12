@@ -31,9 +31,9 @@
                 <h3>Dependency Injection Framework</h3>
 
                 <ul class="project-points">
-                  <li>Custom DI container and resolver powering the Lambda Pulse web server engine</li>
-                  <li>Registration of abstractions, value types, and reference types, with lifecycle management</li>
-                  <li>Instance caching and automated circular dependency detection</li>
+                  <li>Lightweight DI container and resolver powering the Lambda Pulse web server engine.</li>
+                  <li>Registration of value types, reference types, and abstractions, with lifetime management.</li>
+                  <li>Instance caching and automated circular dependency detection.</li>
                 </ul>
 
                 <div class="project-actions project-actions--compact">
@@ -68,9 +68,9 @@
                 <h3>Web Server Engine</h3>
 
                 <ul class="project-points">
-                  <li>Custom TCP server with raw HTTP/1.1 request/response parsing</li>
-                  <li>Concurrent connections and pipelined request handling</li>
-                  <li>Request pipeline with 20+ pluggable middleware components</li>
+                  <li>Custom HTTP/1.1 web server engine with a request/response pipeline.</li>
+                  <li>Concurrent connections with keep-alive for multiple sequential requests per connection.</li>
+                  <li>Request pipeline with 20+ pluggable middleware components.</li>
                 </ul>
 
                 <div class="project-actions">
@@ -105,12 +105,9 @@
                 <h3>Observability Platform</h3>
 
                 <ul class="project-points">
-                  <li>Self-hosted dashboard monitoring the engine powering it</li>
-                  <li>Real-time server telemetry via WebSocket feeds</li>
-                  <li>
-                    NGINX and Redis wired into the middleware pipeline for HTTPS redirection, caching, and session
-                    management
-                  </li>
+                  <li>Self-hosted, self-observing dashboard, monitoring the engine powering it.</li>
+                  <li>Live server telemetry streamed via Server-Sent Events.</li>
+                  <li>Nginx and Redis wired into the middleware pipeline for HTTPS redirection and caching.</li>
                 </ul>
 
                 <div class="project-actions">
@@ -121,12 +118,7 @@
                     <li>PostgreSQL</li>
                   </ul>
                   <div class="project-links">
-                    <a
-                      class="source-link"
-                      href="https://lambdapulse.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a class="source-link" href="https://lambdapulse.app" target="_blank" rel="noopener noreferrer">
                       <img src="./images/icons/demoPink.png" alt="" width="20" height="20" />
                       <span>Live Demo</span>
                     </a>
