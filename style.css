@@ -2,7 +2,6 @@
   --surface: #0b0014;
   --primary: #f5e9e2;
   --secondary: #d44d5c;
-  --secondary-hover: #e15d6c;
   font-family: "Montserrat", sans-serif;
   font-synthesis: none;
 }
@@ -256,22 +255,6 @@ img {
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
-
-.live-project-link {
-  color: var(--primary);
-  background: var(--secondary);
-  box-shadow: 0 0 15px rgb(212 77 92 / 15%);
-}
-
-.live-project-link:hover {
-  background: var(--secondary-hover);
-  border-color: var(--secondary-hover);
-  box-shadow: 0 0 25px rgb(212 77 92 / 30%);
-}
-
-.live-project-link:hover img {
-  filter: none;
 }
 
 .page-control {
