@@ -437,6 +437,17 @@ img {
   }
 }
 
+@media (max-width: 47.999rem) {
+  .site-header,
+  .archive-header {
+    margin-bottom: 1.5rem;
+  }
+
+  #featured-page .project-grid {
+    row-gap: 1rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .site-header h1 {
     font-size: 3rem;
